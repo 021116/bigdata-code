@@ -5,6 +5,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
+
 public class HdfsUtils {
     private FileSystem fileSystem;
     @Before
@@ -26,5 +28,10 @@ public class HdfsUtils {
         String localFilePath = "C:\\Users\\mortal\\Desktopedip";
         String hdfsFilePath = "/";
         fileSystem.copyFromLocalFile(new Path(localFilePath),new Path(hdfsFilePath));
+    }
+    @Test
+    public void testCreateFile() throws IOException {
+        String hdfsFilePath = "/newfile.txt";
+        fileSystem.createNewFile(new Path(hdfsFilePath));
     }
 }
