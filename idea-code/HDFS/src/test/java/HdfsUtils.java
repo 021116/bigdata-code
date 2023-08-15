@@ -40,4 +40,9 @@ public class HdfsUtils {
         String localFilePath = "C:\\Users\\mortal\\Desktop\\file.txt";
         fileSystem.copyToLocalFile(new Path(hdfsFilePath), new Path(localFilePath));
     }
+    @Test
+    public void testDeleteFile() throws IOException {
+        String hdfsFilePath = "/newfile.txt";
+        fileSystem.delete(new Path(hdfsFilePath), false);
+    }
 }
