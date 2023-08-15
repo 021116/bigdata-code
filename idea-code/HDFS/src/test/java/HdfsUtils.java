@@ -1,7 +1,9 @@
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 
 public class HdfsUtils {
     private FileSystem fileSystem;
@@ -18,5 +20,11 @@ public class HdfsUtils {
     public void tearDown() throws Exception {
         //  在每个测试方法之后执行的清理工作
         fileSystem.close();
+    }
+    @Test
+    public void testUploadDile() throws Exception{
+        String localFilePath = "C:\\Users\\mortal\\Desktopedip";
+        String hdfsFilePath = "/";
+        fileSystem.copyFromLocalFile(new Path(localFilePath),new Path(hdfsFilePath));
     }
 }
