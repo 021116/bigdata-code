@@ -29,9 +29,15 @@ public class Demo01 {
         // 配置的意思
         Configuration configuration = new Configuration();
         //  hdfs的连接地址
-        configuration.set("fs.defaultFS","hdfs://bigdata:9820");
+        configuration.set("fs.defaultFS","hdfs://bigdata01:9820");
         FileSystem fileSystem = FileSystem.newInstance(configuration);
         System.out.println(fileSystem);
     }
-
+    @Test
+    public void test04() throws Exception {
+        // 配置的意思
+        Configuration configuration = new Configuration();
+        FileSystem fileSystem = FileSystem.newInstance(new URI("hdfs://bigdata01:9820"), configuration);
+        System.out.println(fileSystem);
+    }
 }
