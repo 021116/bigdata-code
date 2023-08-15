@@ -50,4 +50,9 @@ public class HdfsUtils {
         fileSystem.mkdirs(new Path("/input"));
         System.out.println("创建文件夹成功");
     }
+    @Test
+    public void testRename() throws IOException {
+        fileSystem.rename(new Path("/edip"),new Path("/aaa.txt"));
+
+    }
 }
