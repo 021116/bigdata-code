@@ -25,7 +25,7 @@ public class HdfsUtils {
     }
     @Test
     public void testUploadDile() throws Exception{
-        String localFilePath = "C:\\Users\\mortal\\Desktopedip";
+        String localFilePath = "C:\\Users\\mortal\\Desktop\\edip";
         String hdfsFilePath = "/";
         fileSystem.copyFromLocalFile(new Path(localFilePath),new Path(hdfsFilePath));
     }
@@ -33,5 +33,11 @@ public class HdfsUtils {
     public void testCreateFile() throws IOException {
         String hdfsFilePath = "/newfile.txt";
         fileSystem.createNewFile(new Path(hdfsFilePath));
+    }
+    @Test
+    public void testDownloadFile() throws IOException {
+        String hdfsFilePath = "/newfile.txt";
+        String localFilePath = "C:\\Users\\mortal\\Desktop\\file.txt";
+        fileSystem.copyToLocalFile(new Path(hdfsFilePath), new Path(localFilePath));
     }
 }
