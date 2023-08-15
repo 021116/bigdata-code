@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.io.IOException;
 import java.net.URI;
 
+//  使用java代码连接hdfs
 public class Demo01 {
     @Test
     public void test01() throws IOException {
