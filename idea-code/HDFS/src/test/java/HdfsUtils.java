@@ -45,4 +45,9 @@ public class HdfsUtils {
         String hdfsFilePath = "/newfile.txt";
         fileSystem.delete(new Path(hdfsFilePath), false);
     }
+    @Test
+    public void testMkDir() throws IOException {
+        fileSystem.mkdirs(new Path("/input"));
+        System.out.println("创建文件夹成功");
+    }
 }
