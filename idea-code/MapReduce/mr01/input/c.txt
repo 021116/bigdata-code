@@ -1,0 +1,2 @@
+hello hadoop hello java hello storm hello spark hello redis hello zookeeper
+hello hive hello hbase hello flume
