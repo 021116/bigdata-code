@@ -1,2 +1,0 @@
-hello bigdata hello 1999 hello beijing hello
-world hello hello java good
