@@ -21,7 +21,8 @@ public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritabl
         // hello bigdata hello 1999 hello beijing hello
         String line = value.toString();
         // 切割,变成一个数组
-        String[] arr = line.split(" ");
+        // \s表示空格,这里\\s+表示一个到多个空格
+        String[] arr = line.split("\\s+");
         // 往外写
         for (String word : arr) {
             context.write(new Text(word), new IntWritable(1));
