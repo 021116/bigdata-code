@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/idea-code/MapReduce/WordCount/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/idea-code/hive/demo1/src/main/java" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
